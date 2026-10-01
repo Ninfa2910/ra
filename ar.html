@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>RA - Partes de la computadora</title>
+<script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/3.4.8/aframe/build/aframe-ar.js"></script>
+<style>
+body{margin:0;overflow:hidden;font-family:Arial,sans-serif}
+#info{position:fixed;z-index:10;left:10px;right:10px;top:10px;background:rgba(0,0,0,.72);color:white;padding:10px 14px;border-radius:10px;text-align:center}
+</style>
+</head>
+<body>
+<div id="info"><b>Explora la computadora con Realidad Aumentada</b><br>
+Permite el uso de la cámara y apunta al marcador impreso. Mantén todo el cuadrado negro visible.</div>
+<a-scene embedded vr-mode-ui="enabled:false"
+ arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;"
+ renderer="logarithmicDepthBuffer: true; precision: medium;">
+
+    <a-marker type="pattern" url="patterns/01_monitor.patt" emitevents="true" id="m1">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="MONITOR" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Dispositivo de salida que muestra información visual." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/02_teclado.patt" emitevents="true" id="m2">
+      <a-plane position="0 0.45 0" width="1.2" height="0.55" rotation="-90 0 0" material="color: #1976D2;"></a-plane>
+      <a-text value="TECLADO" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Dispositivo de entrada utilizado para escribir datos y comandos." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/03_mouse.patt" emitevents="true" id="m3">
+      <a-sphere position="0 0.45 0" radius="0.38" material="color: #1976D2;"></a-sphere>
+      <a-text value="MOUSE" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Dispositivo apuntador para seleccionar y manipular elementos." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/04_gabinete.patt" emitevents="true" id="m4">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="GABINETE / CPU" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Estructura que protege y organiza los componentes internos." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/05_placa_madre.patt" emitevents="true" id="m5">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="PLACA MADRE" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Tarjeta principal que conecta los componentes del computador." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/06_procesador.patt" emitevents="true" id="m6">
+      <a-cylinder position="0 0.35 0" radius="0.35" height="0.25" material="color: #1976D2;"></a-cylinder>
+      <a-text value="PROCESADOR" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Ejecuta instrucciones y procesa los datos del sistema." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/07_ram.patt" emitevents="true" id="m7">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="MEMORIA RAM" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Almacena temporalmente datos que están siendo utilizados." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/08_ssd.patt" emitevents="true" id="m8">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="DISCO SSD" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Almacena de forma permanente el sistema, programas y archivos." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/09_fuente.patt" emitevents="true" id="m9">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="FUENTE DE PODER" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Convierte y distribuye energía eléctrica a los componentes." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/10_grafica.patt" emitevents="true" id="m10">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="TARJETA GRÁFICA" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Procesa imágenes, video y gráficos." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/11_disipador.patt" emitevents="true" id="m11">
+      <a-cylinder position="0 0.35 0" radius="0.35" height="0.25" material="color: #1976D2;"></a-cylinder>
+      <a-text value="DISIPADOR" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Ayuda a controlar la temperatura del procesador." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+    <a-marker type="pattern" url="patterns/12_puertos.patt" emitevents="true" id="m12">
+      <a-box position="0 0.45 0" width="1.1" height="0.55" depth="0.18" material="color: #1976D2;"></a-box>
+      <a-text value="PUERTOS / CONECTORES" position="0 0.95 0" rotation="-90 0 0" align="center" width="3.4" color="#111"></a-text>
+      <a-text value="Permiten conectar periféricos, red, audio y video." position="0 0.08 0.55" rotation="-90 0 0" align="center" width="2.6" color="#111"></a-text>
+    </a-marker>
+<a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>

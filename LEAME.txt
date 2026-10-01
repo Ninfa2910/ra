@@ -1,0 +1,13 @@
+PAQUETE RA - PARTES DE LA COMPUTADORA
+
+1. Suba toda esta carpeta a un servidor web HTTPS (por ejemplo, el servidor de su institución).
+2. Abra index.html desde el celular.
+3. Autorice el uso de la cámara.
+4. Imprima marcadores_imprimir.html al 100% o use los PNG de la carpeta marcadores.
+5. Apunte la cámara al marcador completo, con buena iluminación.
+
+IMPORTANTE:
+- Abrir index.html directamente como archivo local (file://) puede impedir el acceso a la cámara.
+- El sitio debe servirse por HTTPS para que el navegador móvil permita la cámara.
+- No cambie los archivos .patt ni los nombres de las carpetas.
+- Estos marcadores están vinculados específicamente con los archivos .patt incluidos.
